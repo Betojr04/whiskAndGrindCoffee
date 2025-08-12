@@ -1,13 +1,16 @@
 :root {
-    --bg: #fff8f3;
+    --bg: #FDF9F7;
+    /* clean warm background */
     --fg: #2b221b;
     --muted: #7a6a60;
     --card: #ffffff;
     --stroke: #efe4da;
-    --green: #1f6f4a;
-    --mint: #86c8a5;
-    --blush: #f4c6cf;
-    --gold: #c7953b;
+    --green: #3B7D61;
+    /* muted artisan matcha green */
+    --mint: #CDE7D0;
+    /* airy mint */
+    --blush: #F5D0D7;
+    /* dusty blush pink */
     --shadow: 0 12px 28px rgba(32, 24, 18, .12);
     --radius: 18px;
 }
@@ -63,7 +66,7 @@ h2 {
 }
 
 .highlight {
-    background: linear-gradient(0deg, rgba(199, 149, 59, .18), rgba(199, 149, 59, .18));
+    background: linear-gradient(0deg, rgba(247, 200, 208, .35), rgba(247, 200, 208, .35));
     padding: 0 .25rem;
     border-radius: .4rem
 }
@@ -97,9 +100,10 @@ h2 {
     border: 1px solid var(--stroke);
     border-radius: 999px;
     padding: .45rem .7rem;
-    background: #fff;
+    background: var(--blush);
     box-shadow: var(--shadow);
-    font-weight: 600
+    font-weight: 600;
+    color: var(--fg);
 }
 
 .actions {
@@ -187,7 +191,7 @@ nav a.btn {
     width: min(320px, 80vw);
     aspect-ratio: 3/4;
     border-radius: var(--radius);
-    background: linear-gradient(180deg, #1f6f4a 0%, #1f6f4a 58%, #ffffff 58%, #ffffff 100%);
+    background: linear-gradient(180deg, var(--green) 0%, var(--green) 58%, #ffffff 58%, #ffffff 100%);
     box-shadow: var(--shadow);
     border: 1px solid var(--stroke);
     position: relative;
@@ -249,7 +253,7 @@ nav a.btn {
 }
 
 .section.alt {
-    background: #fff;
+    background: var(--blush);
     border-top: 1px solid var(--stroke);
     border-bottom: 1px solid var(--stroke)
 }
@@ -395,7 +399,7 @@ nav a.btn {
 .site-footer {
     padding: 1.2rem 0;
     border-top: 1px solid var(--stroke);
-    background: #fff
+    background: var(--blush);
 }
 
 .foot {
