@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+# Ensure the function triggers on form submission
+[[functions]]
+  name = "submission-created"
+  included_files = ["netlify/functions/submission-created.js"]
