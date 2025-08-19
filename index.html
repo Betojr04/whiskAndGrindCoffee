@@ -42,17 +42,26 @@
     <header class="site-header">
         <div class="container nav">
             <a class="brand" href="#home">
-                <img src="./assets/whiskAndGrind.png" alt="Whisk & Grind Cafe logo" aria-hidden="true"
-                    class="brand-mark" />
+                <img src="./assets/whiskAndGrind.png" alt="Whisk & Grind Cafe logo" class="brand-mark" />
                 <span class="brand-text">Whisk &amp; Grind</span>
             </a>
-            <nav>
+
+            <!-- Hamburger button (mobile only) -->
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="nav-bar"></span>
+                <span class="nav-bar"></span>
+                <span class="nav-bar"></span>
+            </button>
+
+            <!-- Nav links -->
+            <nav id="primary-nav" class="nav-links">
                 <a href="#menu">Menu</a>
                 <a href="#hours">Hours</a>
                 <a href="#order" class="btn btn-accent">Order</a>
             </nav>
         </div>
     </header>
+
 
     <main id="home">
         <!-- HERO -->
@@ -89,14 +98,13 @@
         </section>
 
         <!-- MENU -->
-        <section id="menu" class="section">
+        <!-- <section id="menu" class="section">
             <div class="container">
                 <div class="section-head">
                     <h2>Menu</h2>
                     <p class="muted">Permanent faves + rotating seasonal drops.</p>
                 </div>
 
-                <!-- Permanent -->
                 <h3 class="subhead">Permanent</h3>
                 <div class="menu-grid">
                     <article class="menu-card">
@@ -121,7 +129,6 @@
                     </article>
                 </div>
 
-                <!-- Seasonal -->
                 <h3 class="subhead">Seasonal</h3>
                 <div class="menu-grid">
                     <article class="menu-card">
@@ -144,7 +151,6 @@
             </div>
         </section>
 
-        <!-- HOURS -->
         <section id="hours" class="section alt">
             <div class="container">
                 <div class="section-head">
@@ -170,7 +176,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- ORDER CTA + PREORDER FORM -->
         <section id="order" class="section">

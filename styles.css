@@ -15,6 +15,16 @@
     --radius: 18px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* adjust if your header height changes */
+
 * {
     box-sizing: border-box
 }
@@ -452,4 +462,98 @@ nav a.btn {
     .menu-grid {
         grid-template-columns: 1fr
     }
+}
+
+/* ---------- Mobile hamburger nav ---------- */
+.nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    padding: .4rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+
+.nav-toggle .nav-bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--fg);
+    margin: 6px 0;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+/* desktop defaults */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* mobile behavior */
+@media (max-width: 720px) {
+    .nav {
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* hide links by default on mobile */
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .25rem;
+        width: 100%;
+        background: var(--bg);
+        border-bottom: 1px solid var(--stroke);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height .25s ease, opacity .2s ease, visibility .2s ease;
+        z-index: 50;
+        padding: 0 .5rem;
+    }
+
+    .nav-links a {
+        margin: .6rem .5rem;
+    }
+
+    /* open state */
+    .nav-links.is-open {
+        max-height: 260px;
+        /* enough for your 3 links */
+        opacity: 1;
+        visibility: visible;
+        padding-bottom: .6rem;
+    }
+
+    /* animate burger into X */
+    .nav-toggle.is-open .nav-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.is-open .nav-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.is-open .nav-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* prevent page scroll when menu is open (mobile) */
+.no-scroll {
+    overflow: hidden;
 }
