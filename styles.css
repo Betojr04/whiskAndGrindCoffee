@@ -1,5 +1,5 @@
 :root {
-    --bg: #FDF9F7;
+    --bg: #FBEDEA;
     /* clean warm background */
     --fg: #2b221b;
     --muted: #7a6a60;
@@ -66,9 +66,9 @@ h2 {
 }
 
 .highlight {
-    background: linear-gradient(0deg, rgba(247, 200, 208, .35), rgba(247, 200, 208, .35));
+    background: linear-gradient(0deg, rgba(245, 208, 215, .4), rgba(205, 231, 208, .4));
     padding: 0 .25rem;
-    border-radius: .4rem
+    border-radius: .4rem;
 }
 
 .btn {
@@ -113,20 +113,23 @@ h2 {
 }
 
 /* Nav */
+
+
+
 .site-header {
     position: sticky;
     top: 0;
     backdrop-filter: saturate(160%) blur(8px);
-    background: rgba(255, 248, 243, .7);
+    background: rgba(253, 249, 247, .7);
     border-bottom: 1px solid var(--stroke);
-    z-index: 40
+    z-index: 40;
 }
 
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .6rem 0
+    padding: .6rem 0;
 }
 
 .brand {
@@ -135,7 +138,7 @@ h2 {
     gap: .6rem;
     text-decoration: none;
     color: var(--fg);
-    font-weight: 800
+    font-weight: 800;
 }
 
 .brand-text {
@@ -143,8 +146,8 @@ h2 {
 }
 
 .brand-mark {
-    width: 36px;
-    height: 36px
+    width: 100px;
+    height: auto;
 }
 
 nav a {
@@ -169,7 +172,7 @@ nav a.btn {
     display: grid;
     grid-template-columns: 1.2fr .8fr;
     gap: 2rem;
-    align-items: center
+    align-items: center;
 }
 
 .overtitle {
@@ -177,7 +180,7 @@ nav a.btn {
     text-transform: uppercase;
     color: var(--green);
     font-weight: 800;
-    font-size: .85rem
+    font-size: .85rem;
 }
 
 .badges {
@@ -228,7 +231,7 @@ nav a.btn {
     width: 10px;
     height: 60%;
     background: linear-gradient(var(--blush), var(--mint));
-    border-radius: 8px
+    border-radius: 8px;
 }
 
 .caption {
@@ -242,8 +245,9 @@ nav a.btn {
     position: absolute;
     inset: auto -10% -25% -10%;
     height: 180px;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, .03) 50%, transparent 50%), linear-gradient(0deg, rgba(0, 0, 0, .03) 50%, transparent 50%);
-    background-size: 40px 40px, 40px 40px;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, .03) 50%, transparent 50%),
+        linear-gradient(0deg, rgba(0, 0, 0, .03) 50%, transparent 50%);
+    background-size: 40px 40px;
     transform: rotate(-2deg);
 }
 
@@ -255,7 +259,7 @@ nav a.btn {
 .section.alt {
     background: var(--blush);
     border-top: 1px solid var(--stroke);
-    border-bottom: 1px solid var(--stroke)
+    border-bottom: 1px solid var(--stroke);
 }
 
 .subhead {
@@ -263,14 +267,14 @@ nav a.btn {
     font-size: 1.05rem;
     color: var(--green);
     letter-spacing: .04em;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 /* Menu */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem
+    gap: 1rem;
 }
 
 .menu-card {
@@ -278,7 +282,7 @@ nav a.btn {
     border: 1px solid var(--stroke);
     border-radius: var(--radius);
     padding: 1rem;
-    box-shadow: var(--shadow)
+    box-shadow: var(--shadow);
 }
 
 .menu-card h4 {
@@ -290,14 +294,14 @@ nav a.btn {
     align-items: center;
     justify-content: space-between;
     font-weight: 800;
-    margin-top: .6rem
+    margin-top: .6rem;
 }
 
 /* Hours */
 .hours {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem
+    gap: 1rem;
 }
 
 .hours-card {
@@ -305,7 +309,7 @@ nav a.btn {
     border: 1px solid var(--stroke);
     border-radius: var(--radius);
     padding: 1rem;
-    box-shadow: var(--shadow)
+    box-shadow: var(--shadow);
 }
 
 .hours-card h4 {
@@ -318,7 +322,7 @@ nav a.btn {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
     gap: 1.4rem;
-    align-items: start
+    align-items: start;
 }
 
 .card.form {
@@ -326,7 +330,7 @@ nav a.btn {
     border: 1px solid var(--stroke);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 1rem
+    padding: 1rem;
 }
 
 .form label {
@@ -343,7 +347,7 @@ nav a.btn {
     border: 1px solid var(--stroke);
     border-radius: 12px;
     font: inherit;
-    background: #fff
+    background: #fff;
 }
 
 .form .hidden {
@@ -364,13 +368,13 @@ nav a.btn {
     border: 1px solid var(--stroke);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 1.2rem
+    padding: 1.2rem;
 }
 
 .t-quote {
     font-family: Fraunces, serif;
     font-size: 1.2rem;
-    margin-bottom: .8rem
+    margin-bottom: .8rem;
 }
 
 .t-author {
@@ -383,7 +387,7 @@ nav a.btn {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid var(--stroke)
+    border: 1px solid var(--stroke);
 }
 
 /* IG */
@@ -396,23 +400,31 @@ nav a.btn {
 }
 
 /* Footer */
+.foot .left {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    /* space between logo and text */
+}
+
 .site-footer {
     padding: 1.2rem 0;
     border-top: 1px solid var(--stroke);
     background: var(--blush);
 }
 
+
 .foot {
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .foot a {
     text-decoration: none;
     color: var(--fg);
     font-weight: 700;
-    margin-left: 1rem
+    margin-left: 1rem;
 }
 
 /* Responsive */
